@@ -25,12 +25,7 @@ app.get("/pokemon/:id", (req, res) => {
   res.json(pokemon);
 });
 
-app.get("/pokemon/:id/:info", (req, res) => {
-  let { id, info } = req.params;
-  const pokemon = pokemonData.find((pokemon) => pokemon.id === parseInt(id));
 
-  res.json(pokemon[info]);
-});
 
 for (const [key, value] of Object.entries(pokemonData)) {
   console.log(value.type[0]);
